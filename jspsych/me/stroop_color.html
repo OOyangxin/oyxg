@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../dist/jspsych.js"></script>
+    <script src="../dist/plugin-image-keyboard-response.js"></script>
+    <script src="../dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../dist/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+
+    
+    // sssssssss
+    var preload = {
+      type: jsPsychPreload,
+      auto_preload: true
+    };
+
+    
+    // 加载图片：红色，黄色，蓝色，绿色
+    var trial = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stim'),
+      trial_duration: 6000,
+      choices: "NO_KEYS",
+      prompt: '<p>加载中，请集中注意力，任务即将开始！！</p>',
+      stimulus_width: 700, 
+      maintain_aspect_ratio: true,
+      post_trial_gap: 0,
+      //render_on_canvas: false 
+    };
+
+    var trial_proc = {
+      timeline: [trial],
+      timeline_variables: [ 
+        {stim: 'img/指导语.png'}
+      ],
+      repetitions: 1
+    };
+
+    var trial_1 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/橙1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 橙 或 j 黑.</p>'
+    };
+
+    var trial_2 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/蓝2.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 红 或 j 蓝.</p>'
+    };
+
+    var trial_w = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/蓝3.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 蓝 或 j 橙.</p>'
+    };
+
+    var trial_3 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/粉1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 绿 或 j 粉.</p>'
+    };
+
+    var trial_4 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/黑1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 黑 或 j 蓝.</p>'
+    };
+
+    var trial_e = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/蓝2.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 红 或 j 蓝.</p>'
+    };
+
+    var trial_3 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/粉1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 绿 或 j 粉.</p>'
+    };
+
+   
+    var trial_5 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/红1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 紫 或 j 红.</p>'
+    };
+
+    var trial_6 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/橙2.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 橙 或 j 紫.</p>'
+    };
+
+    var trial_u = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/红1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 紫 或 j 红.</p>'
+    };
+
+    var trial_7 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/紫2.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 紫 或 j 蓝.</p>'
+    };
+
+    trial_t = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/绿1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 绿 或 j 红.</p>'
+    };
+
+    var trial_8 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/红2.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 橙 或 j 红.</p>'
+    };
+
+    var trial_r = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/紫1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 橙 或 j 紫.</p>'
+    };
+
+    var trial_9 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/蓝1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 绿 或 j 蓝.</p>'
+    };
+
+    trial_10 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/绿1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 绿 或 j 红.</p>'
+    };
+
+    var trial_y = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/紫2.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 紫 或 j 蓝.</p>'
+    };
+
+    var trial_11 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/紫1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 橙 或 j 紫.</p>'
+    };
+
+    var trial_12 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/蓝3.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的颜色是___?   请按：f 蓝 或 j 橙.</p>'
+    };
+
+    var trial_q = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/橙1.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      prompt: '<p>字体的意思是___?   请按：f 黑 或 j橙 .</p>'
+    };
+    
+
+    var trial_13 = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: 'img/0_red.png',
+      choices: ['f','j'],
+      trial_duration: 5000,
+      stimulus_width: 300,
+      maintain_aspect_ratio: false,
+      prompt: '<p>这是绿色吗? 请按：是f 或 否j.</p><p>(确认后结束！)</p>'
+    };
+
+    jsPsych.run([preload, trial_proc, trial_1, trial_2, trial_t, trial_3, trial_y, trial_4, trial_5, trial_w, trial_6, trial_7, trial_q, trial_8, trial_r, trial_9, trial_10, trial_e, trial_11, trial_12, trial_u, trial_13]);
+
+  </script>
+</html>
